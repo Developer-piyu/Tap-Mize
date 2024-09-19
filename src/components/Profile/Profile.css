@@ -1,0 +1,135 @@
+.profile {
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  color: #fff;
+  overflow: hidden; /* Ensure no content goes out of bounds */
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.profile__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./SplashScreen.png);
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  width: 100%;
+  height: auto;
+  padding: 20px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding does not exceed the width */
+}
+
+.profile__left {
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.profile__right {
+  width: 70%;
+  margin-top: 2rem;
+}
+
+.profile__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile__icons {
+  font-size: 60px;
+}
+
+.profile__header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile__header-subtitle {
+  font-size: 16px;
+}
+
+.profile__header-text {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Updated grid to always show 3 columns */
+.profile__links {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 items per row */
+  gap: 20px;
+}
+
+.profile__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.profile__link:hover {
+  background-color: #444;
+}
+
+.profile__link i {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.profile__link span {
+  font-size: 12px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .profile__header {
+    flex-direction: row; /* Keep row direction on mobile */
+    justify-content: flex-start; /* Align items to the left */
+  }
+
+  .profile__left {
+    flex: 0 0 auto;
+    margin: 0 10px 0 0;
+  }
+
+  .profile__image {
+    width: 80px; /* Smaller image size for mobile */
+    height: 80px;
+  }
+
+  .profile__right {
+    width: 100%; /* Adjust width for mobile view */
+    margin-top: 0; /* Remove top margin for mobile */
+  }
+
+  .profile__header-title {
+    font-size: 18px; /* Smaller font size for mobile */
+  }
+
+  .profile__header-subtitle {
+    font-size: 14px;
+  }
+
+  .profile__header-text {
+    font-size: 12px; /* Smaller text size */
+  }
+
+  .profile__links {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns on mobile */
+  }
+
+  .profile__icons {
+    font-size: 40px; /* Smaller icons on mobile */
+  }
+}
