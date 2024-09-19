@@ -77,17 +77,13 @@ export default function BasicTable() {
   };
 
   const handleCopyLink = (userId) => {
-    const link = `${window.location.origin}/profile/${userId}`;
-    navigator.clipboard
-      .writeText(link)
+    const userLink = `${window.location.origin}/profile/${userId}`
+    navigator.clipboard.writeText(userLink)
       .then(() => {
-        setAlertVisible(true);
-        setTimeout(() => {
-          setAlertVisible(false);
-        }, 3000);
+        alert("User link copied to clipboard!");
       })
       .catch((error) => {
-        console.error("Failed to copy link:", error);
+        console.error("Error copying user link:", error);
       });
   };
 
